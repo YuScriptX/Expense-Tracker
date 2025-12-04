@@ -15,6 +15,17 @@
 
     <button id="addBtn">+ Add Expense</button>
 
+    <div id="formContainer" style="display: none;">
+        <h2>Add New Expense</h2>
+        <form id="expenseForm">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="number" id="amount" placeholder="Amount (€)" step="0.01" required>
+            <input type="text" id="category" placeholder="Category" required>
+            <input type="date" id="date" required>
+            <button type="submit">Save</button>
+        </form>
+    </div>
+
     <ul id="expenseList"></ul>
 
     <script src="app.js"></script>
