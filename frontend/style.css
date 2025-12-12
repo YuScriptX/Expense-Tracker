@@ -1,86 +1,166 @@
+/* =========================
+   Base layout
+   ========================= */
 body {
-    font-family: 'Arial, sans-serif';
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
-    background: #f2f2f2;
+  font-family: Arial, sans-serif;
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background: #f2f2f2;
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
+/* =========================
+   Balance card
+   ========================= */
 .balance-box {
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    margin-bottom: 20px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
+/* =========================
+   Add button
+   ========================= */
 #addBtn {
-    width: 75%;
-    margin-left: 50px;
-    padding: 10px;
-    background: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    margin-bottom: none;
+  width: 100%;
+  padding: 12px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  margin-bottom: 16px; /* none bestaat niet */
+  cursor: pointer;
 }
 
-#expenseList li {
-    background: white;
-    padding: 10px;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    list-style: none;
+#addBtn:hover {
+  opacity: 0.9;
 }
 
+/* =========================
+   Form container spacing
+   ========================= */
+#formContainer {
+  margin-top: 16px;
+}
+
+/* =========================
+   Form layout & inputs
+   ========================= */
 .form {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 12px;
-}
-
-.form input {
-    width: 100%;
-    padding: 10px 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 14px;
-}
-
-.form button {
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background-color: #4CAF50;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.form button:hover {
-    opacity: 0.9;
-}
-
-.form input:focus {
-    outline: none;
-    border-color: #4CAF50;
-    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
-}
-
-.form button:active {
-    transform: scale(0.98);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
 }
 
 .form input,
 .form button {
-    border-radius: 12px;
+  border-radius: 12px;
 }
 
-#formContainer {
-    margin-top: 16px;
+.form input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.form input:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+.form button {
+  padding: 12px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form button:hover {
+  opacity: 0.9;
+}
+
+.form button:active {
+  transform: scale(0.98);
+}
+
+/* =========================
+   Expense list (cards)
+   ========================= */
+#expenseList {
+  padding: 0;
+  margin-top: 14px;
+}
+
+.expense-item {
+  background: white;
+  padding: 12px 14px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.meta {
+  margin-top: 6px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #e9f7ee;
+  color: #1b7a3a;
+  font-weight: 700;
+}
+
+.amount {
+  font-weight: 800;
+}
+
+.delete-btn {
+  margin-left: 10px;
+  border: none;
+  background: #f1f1f1;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  opacity: 0.85;
+}
+
+/* =========================
+   Empty state
+   ========================= */
+.empty {
+  list-style: none;
+  padding: 14px;
+  border-radius: 12px;
+  background: white;
+  text-align: center;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
 }
