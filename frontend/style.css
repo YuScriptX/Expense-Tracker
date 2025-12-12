@@ -37,3 +37,50 @@ h1 {
     margin-bottom: 10px;
     list-style: none;
 }
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.form button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form button:hover {
+    opacity: 0.9;
+}
+
+.form input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+.form button:active {
+    transform: scale(0.98);
+}
+
+.form input,
+.form button {
+    border-radius: 12px;
+}
+
+#formContainer {
+    margin-top: 16px;
+}
